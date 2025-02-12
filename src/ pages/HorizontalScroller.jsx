@@ -6,11 +6,17 @@
   import backgroundImage from '../assets/BackgroundH.jpeg';
   
   const glow = keyframes`
-    0% { box-shadow: 0 0 5px #B94E5C; }
-    50% { box-shadow: 0 0 20px #B94E5C; }
-    100% { box-shadow: 0 0 5px #B94E5C; }
-  `;
-  
+    0% {
+        box-shadow: 0 0 5px #B94E5C, 0 0 10px #B94E5C, 0 0 20px #B94E5C;
+    }
+    50% {
+        box-shadow: 0 0 20px #B94E5C, 0 0 40px #B94E5C, 0 0 60px #B94E5C;
+    }
+    100% {
+        box-shadow: 0 0 5px #B94E5C, 0 0 10px #B94E5C, 0 0 20px #B94E5C;
+    }
+`;
+
   const Container = styled.div`
     
     width: 100%;
@@ -128,7 +134,7 @@ const QuoteHeader = styled.h2`
   `;
   
   const StageTitle = styled.h2`
-    font-size: 18px;
+    font-size: 30px;
     color: #B94E5C;
     margin-bottom: 10px;
     font-weight: bold;
@@ -172,7 +178,7 @@ z-index: 3;
 `;
 const ConnectingLine = styled.div`
 position: absolute;
-background-color: #FCD0D6;
+background-color: #F6687A;
 width: 4px;
 right: 25%;
 transform-origin: top right;
@@ -196,7 +202,7 @@ transition: all 0.1s ease-out;
     height: 24px;
     background-color: #B94E5C;
     border: 2px solid #fff;
-    border-radius: 50%;
+    border-radius: 70%;
     z-index: 3;
     right: calc(25% - 6px);
     animation: ${glow} 1s infinite;
